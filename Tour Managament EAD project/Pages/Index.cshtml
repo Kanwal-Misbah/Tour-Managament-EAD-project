@@ -1,0 +1,22 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@foreach (var place in Model.visiting_place)
+{
+    <div class="box">
+        
+        <p> @place.place_name</p>
+        <p> @place.city_name</p>
+        <p> @place.place_description</p>
+        
+       
+       
+    </div>
+}
